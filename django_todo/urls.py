@@ -19,5 +19,6 @@ from todo.views import get_todo_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', get_todo_list)
     
 ]
