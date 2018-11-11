@@ -26,6 +26,9 @@ SECRET_KEY = 'zlj*(zyx)0pk@mm4*+xxl%ae4__k#+**kva&gpjr-jy-b7))_('
 DEBUG = True
 
 ALLOWED_HOSTS = ['django-todo-ddeveloper72.c9users.io']
+ALLOWED_HOSTS = ['127.0.0.1']
+
+
 
 
 # Application definition
