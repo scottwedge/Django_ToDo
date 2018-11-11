@@ -13,12 +13,8 @@
 
         {% csrf_token %}
 
-        <label for="id_name" name="name">Name:</label><br>
-        <input type="text" id="id_name" name="name"/><br>
-        <br>
-        <label for="id_done" name="done">Done:</label><br>
-        <input type="checkbox" id="id_done" name="done"/><br>
-        <br>
+        {{ form.as_p }} {% comment %} rendered as paragraphs, block level elements {% endcomment %}
+
         <button type="submit">Save</button>
     </form>
 
