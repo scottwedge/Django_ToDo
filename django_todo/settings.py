@@ -21,16 +21,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zlj*(zyx)0pk@mm4*+xxl%ae4__k#+**kva&gpjr-jy-b7))_('
+SECRET_KEY = os.environ.get('zlj*(zyx)0pk@mm4*+xxl%ae4__k#+**kva&gpjr-jy-b7))_(')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ddeveloper72-django-todo.herokuapp.com',
+""" ALLOWED_HOSTS = ['ddeveloper72-django-todo.herokuapp.com',
                 'django-todo-ddeveloper72.c9users.io',
-                '127.0.0.1']
+                '127.0.0.1'] """
+
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
+                os.environ.get('HOSTNAME')]
 
 
+host = os.environ.get('SITE_HOST')
+if host:
+    ALLOWED_HOSTS.append(host)
 
 
 # Application definition
@@ -87,7 +93,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 }
  """
 
-DATABASES = {'default': dj_database_url.parse("postgres://tlspwpbxckonzz:b3171de89ed0739f7eaf7e645acd117324540f9fcda08bf60d15ab90692762ee@ec2-54-75-231-3.eu-west-1.compute.amazonaws.com:5432/d7hf8radeulnu2")}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
