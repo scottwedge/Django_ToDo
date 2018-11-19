@@ -26,8 +26,9 @@ SECRET_KEY = 'zlj*(zyx)0pk@mm4*+xxl%ae4__k#+**kva&gpjr-jy-b7))_('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-todo-ddeveloper72.c9users.io']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['ddeveloper72-django-todo.herokuapp.com',
+                'django-todo-ddeveloper72.c9users.io',
+                '127.0.0.1']
 
 
 
