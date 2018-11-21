@@ -1,4 +1,4 @@
-# [Django ToDo](https://ddeveloper72-django-todo.herokuapp.com/)
+# <a href="https://ddeveloper72-django-todo.herokuapp.com/" target="_blank">Django ToDo</a>
 ## An introduction to Django...
 ## The Mini-Walk Through Tutorial
 #### *A part of Full Stack Development*
@@ -85,6 +85,6 @@ else:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 ```
 
-6 Deploying our Django app to Heroku [Django ToDo](https://ddeveloper72-django-todo.herokuapp.com/)
+6 Deploying our Django app to Heroku <a href="https://ddeveloper72-django-todo.herokuapp.com/" target="_blank">Django ToDo</a>
 
     * installing gunicorn and psycopg2, for running our service and to connect to PostgreSQL database
