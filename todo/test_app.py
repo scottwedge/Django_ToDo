@@ -5,4 +5,4 @@ from .apps import TodoConfig
 class TestTodoConfig(TestCase):
     def test_app(self):
         self.assertEqual("todo", TodoConfig.name)
-        self.asertEqual("todo", apps.get_app_config("todo"))
+        self.assertEqual("todo", apps.get_app_config("todo"))
